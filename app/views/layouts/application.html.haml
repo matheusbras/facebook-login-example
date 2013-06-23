@@ -1,0 +1,49 @@
+!!! 5
+%html{:lang => "pt"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:name => "keywords", :content => ""}
+    %meta{:name => "description", :content => ""}
+
+    %title= yield(:title) + "Facebook Login App"
+
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+    = yield(:header_tags)
+
+    = stylesheet_link_tag "application", :type => nil, :media => "all"
+    = javascript_include_tag "application", :type => nil
+    = csrf_meta_tags
+
+    /[if lt IE 9]
+      %script{:src => "http://html5shim.googlecode.com/svn/trunk/html5.js"}
+
+    :plain
+      <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39727689-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+
+  %body{:id => controller.controller_name}
+    #wrap
+      %header
+        %h1 Facebook Login App
+        %h2 Você já tem Facebook, não é mesmo? Então pode logar com ele mesmo.
+
+      #container
+        %section{:role => "main"}
+          - if notice
+            %p.notice
+              = notice
+          - if alert
+            %p.alert
+              = alert
+          = yield

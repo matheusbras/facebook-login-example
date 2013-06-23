@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800);
+
+body {
+  background: #E65540;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #333;
+}
+
+#wrap {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  width: 480px;
+  margin: 0 auto;
+  padding: 15px 0;
+  color: #F8ECC2;
+  text-align: center;
+  border-bottom: 5px #F8ECC2 solid;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+
+header h2 {
+  font-style: italic;
+  font-size: 11px;
+}
+
+p.notice {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  background: rgb(99, 190, 99);
+  border: 1px rgb(235, 95, 95) solid;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.puppy {
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.welcome {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#logout-link {
+  color: #fff;
+  position: fixed;
+  font-size: 12px;
+  top: 20px;
+  left: 20px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#awesome-form {
+  background: #fefefe;
+  width: 500px;
+  margin: 90px auto 0 auto;
+  text-align: center;
+  color: #666;
+
+  a {
+    display: block;
+    background: #3b5998;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+  }
+}
